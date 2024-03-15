@@ -6,6 +6,7 @@ import { hideBin } from 'yargs/helpers';
 const yargs = _yargs(hideBin(process.argv));
 import fs from 'fs';
 import filereader from './util/fileReader.js';
+import leaderboardParser from './util/leaderboardParser.js';
 
 const options = yargs 
     .usage('Usage: -c <path to config file>')
@@ -41,5 +42,6 @@ if (!fs.existsSync(statsDir)) {
 export { statsDir };
 
 filereader();
+leaderboardParser();
 
 
