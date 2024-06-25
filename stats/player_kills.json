@@ -1,8 +1,0 @@
-{
-    "id": "player_kills",
-    "unit": "int",
-    "reader": {
-        "$type": "int",
-        "path": ["minecraft:custom","minecraft:player_kills"]
-    }
-}
