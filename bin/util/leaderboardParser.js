@@ -1,9 +1,11 @@
 import fs from "fs";
+import path from "path";
 import { statsDir } from "../index.js";
 
 function leaderboardParser() {
   for (const file of fs.readdirSync(`./stats`)) {
-    const stat = JSON.parse(fs.readFileSync(`./stats/${file}`));
+    // const stat = JSON.parse(fs.readFileSync(`../stats/${file}`));
+    const stat = JSON.parse(fs.readFileSync(path.join(statsDir, file)));
     let id = stat.id;
     let path = stat.reader.path;
     let leaderboard = [];
